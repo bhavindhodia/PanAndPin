@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Pan&amp;Pin</string>
+
+    <string name="facebook_app_id">293634762119620</string>
+    <string name="fb_login_protocol_scheme">fb293634762119620</string>
+
+    <string name="loginText">Hi, nice to meet you!</string>
+    <string name="loginText2">Pan &amp; Pin welcomes you .Choose below option to get started.</string>
+
+    <string name="googleBtn">Continue With Google</string>
+    <string name="facebookBtn">Continue With Facebook</string>
+
+    <string name="homepageWelcome">What would \n You like to eat today ?</string>
+</resources>

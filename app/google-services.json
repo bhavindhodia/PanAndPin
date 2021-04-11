@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1029535189134",
+    "project_id": "pan-and-pin",
+    "storage_bucket": "pan-and-pin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1029535189134:android:97643d04d0e8f49523a1df",
+        "android_client_info": {
+          "package_name": "com.android.panpin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1029535189134-nes5019kr1lqm1lv07vhefdpbf4uh8ba.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.android.panpin",
+            "certificate_hash": "d278afe0c38c69b8a9408f15807667377597db94"
+          }
+        },
+        {
+          "client_id": "1029535189134-6eon20fcjf7d4c8kt8sjlrvakelc87dt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFdAUeIhjEJ9I508NJdyd3O8UBgpSPVTk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1029535189134-6eon20fcjf7d4c8kt8sjlrvakelc87dt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
