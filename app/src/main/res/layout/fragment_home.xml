@@ -42,6 +42,7 @@
             android:layout_marginBottom="16dp"
             android:text="@string/homepageWelcome"
             android:textSize="@dimen/homepageWelcome"
+            android:textColor="@android:color/black"
             app:layout_constraintBottom_toTopOf="@+id/categoryLayout"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/category_cart" />
@@ -95,7 +96,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="@dimen/bottomMenuHeight"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

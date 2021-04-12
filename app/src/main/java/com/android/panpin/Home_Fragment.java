@@ -1,5 +1,4 @@
 package com.android.panpin;
-
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -46,8 +45,6 @@ public class Home_Fragment extends Fragment {
         homeRecyclerView = root.findViewById(R.id.homepage_rv);
         homeRecyclerView.setLayoutManager(new GridLayoutManager(getApplicationContext(), 2));
         homeRecyclerView.setAdapter(mAdapter);
-
-
     }
 
 
