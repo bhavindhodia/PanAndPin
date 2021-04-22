@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/detailPage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/detail_thumbnail"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:background="#DEDEDE"
+        android:elevation="0dp" />
+
+
+    <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+        android:id="@+id/quantityBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="100dp"
+        android:layout_marginTop="-50dp"
+        android:layout_marginBottom="-20dp"
+        android:elevation="20dp"
+        android:textAlignment="center"
+        app:backGroundColor="@color/colorAccentDark"
+        app:initialNumber="1"
+        app:textColor="@android:color/white"
+        app:textSize="10sp"
+        app:theme="@style/Animation.AppCompat.Dialog" />
+
+
+    <LinearLayout
+        android:id="@+id/detailLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="-50dp"
+
+        android:layout_weight="0.7"
+        android:background="@drawable/detail_bg"
+        android:elevation="0dp"
+
+        android:orientation="vertical"
+        android:paddingTop="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="30dp">
+
+            <TextView
+                android:id="@+id/txt_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/app_name"
+                android:textAlignment="viewStart"
+                android:textColor="@color/darkGrey"
+                android:textSize="@dimen/detailName" />
+
+            <TextView
+                android:id="@+id/txt_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:gravity="end"
+                android:padding="5dp"
+                android:text="@string/app_name"
+                android:textAlignment="gravity"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/detailPrice"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingVertical="10dp">
+
+            <ImageView
+                android:layout_width="@dimen/detail_icons"
+                android:layout_height="@dimen/detail_icons"
+                android:paddingHorizontal="@dimen/detail_icon_txt_padding"
+                android:src="@drawable/star" />
+
+            <TextView
+                android:id="@+id/detail_stars"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/detail_icon_txt_padding"
+                android:text="@string/detail_default_stars"
+                android:textColor="@color/grey" />
+
+            <Space
+                android:layout_width="@dimen/detailSpace"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:layout_width="@dimen/detail_icons"
+                android:layout_height="@dimen/detail_icons"
+                android:paddingHorizontal="@dimen/detail_icon_txt_padding"
+                android:src="@drawable/fire" />
+
+            <TextView
+                android:id="@+id/detail_calories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/detail_icon_txt_padding"
+                android:text="@string/detail_default_calories"
+                android:textColor="@color/grey" />
+
+            <Space
+                android:layout_width="@dimen/detailSpace"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:layout_width="@dimen/detail_icons"
+                android:layout_height="@dimen/detail_icons"
+                android:paddingHorizontal="@dimen/detail_icon_txt_padding"
+                android:src="@drawable/clock" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/detail_icon_txt_padding"
+                android:text="@string/detail_default_cookTime"
+                android:textColor="@color/grey" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/details"
+                android:textColor="@color/darkGrey"
+                android:textSize="@dimen/detailPrice" />
+
+            <TextView
+                android:id="@+id/detail_description"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/detailsDesc"
+                android:textColor="@color/grey" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:paddingHorizontal="15dp">
+
+            <Button
+                android:id="@+id/cartBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="50"
+                android:background="@drawable/button_style"
+                android:drawableStart="@drawable/cart"
+                android:drawablePadding="10dp"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp"
+                android:text="@string/add_to_cart"
+                android:textColor="@android:color/black" />
+
+            <Space
+                android:layout_width="@dimen/detailSpace"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:id="@+id/buyBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:background="@drawable/button_style_2"
+                android:drawableStart="@drawable/flash"
+                android:drawablePadding="10dp"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp"
+                android:text="@string/instant_buy"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

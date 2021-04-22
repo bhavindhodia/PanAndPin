@@ -1,6 +1,6 @@
 package com.android.panpin.adapter;
 
-import android.util.Log;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.panpin.R;
+import com.android.panpin.activities.DetailActivity;
 import com.android.panpin.models.Cake;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
@@ -21,23 +22,27 @@ import static com.facebook.FacebookSdk.getApplicationContext;
 
 public class HomepageAdapter extends FirestoreRecyclerAdapter<Cake, HomepageAdapter.HomeViewHolder> {
 
+
     public HomepageAdapter(@NonNull FirestoreRecyclerOptions<Cake> options) {
         super(options);
     }
 
     @Override
     protected void onBindViewHolder(@NonNull HomeViewHolder holder, int position, @NonNull Cake model) {
-        Log.d("Home_Fragment", "onBindViewHolder: " + model.getImgUrl());
         holder.setProductName(model.getName());
         holder.setProductThumbnail(model.getImgUrl());
+        holder.onThumbClickListener(model);
+
     }
 
     @NonNull
     @Override
     public HomeViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.category_card, parent, false);
+        // onThumbClick(v);
         return new HomeViewHolder(v);
     }
+
 
     static class HomeViewHolder extends RecyclerView.ViewHolder {
 
@@ -47,6 +52,19 @@ public class HomepageAdapter extends FirestoreRecyclerAdapter<Cake, HomepageAdap
             super(itemView);
             view = itemView;
         }
+
+        void onThumbClickListener(final Cake cakeData) {
+            view.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    Intent i = new Intent(v.getContext(), DetailActivity.class);
+                    i.putExtra("CakeData", cakeData);
+                    v.getContext().startActivity(i);
+                }
+            });
+        }
+
 
         void setProductName(String productName) {
             TextView textView = view.findViewById(R.id.categoryTitle);
@@ -62,6 +80,9 @@ public class HomepageAdapter extends FirestoreRecyclerAdapter<Cake, HomepageAdap
             ImageView imageView = view.findViewById(R.id.categoryThumbnail);
             Glide.with(getApplicationContext()).load(productThumbnail).apply(glideOptions).into(imageView);
         }
+
+
     }
+
 
 }

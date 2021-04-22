@@ -1,14 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
     tools:context=".ProfileFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Profile" />
+        android:layout_height="0dp"
+        android:layout_marginTop="-20dp"
+        android:layout_weight="0.4"
 
-</FrameLayout>
+        android:background="@drawable/profile_bg" />
+
+    <ImageView
+        android:id="@+id/profileImg"
+        android:layout_width="@dimen/profilePic"
+        android:layout_height="@dimen/profilePic"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="-50dp"
+        android:padding="1dp"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_weight="0.6"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="20dp"
+
+                android:src="@drawable/user" />
+
+            <TextView
+                android:id="@+id/profileTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textAlignment="center"
+                android:textColor="@color/darkGrey"
+
+                android:textSize="@dimen/profileSubtitle" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="20dp"
+
+                android:src="@drawable/email" />
+
+            <TextView
+                android:id="@+id/profileTitle2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textAlignment="center"
+
+                android:textColor="@color/darkGrey"
+                android:textSize="@dimen/profileSubtitle" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/logoutBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:background="@drawable/profile_bg"
+            android:paddingHorizontal="30dp"
+            android:paddingVertical="15dp"
+            android:text="Log Out"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

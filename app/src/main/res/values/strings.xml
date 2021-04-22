@@ -11,4 +11,21 @@
     <string name="facebookBtn">Continue With Facebook</string>
 
     <string name="homepageWelcome">What would \n You like to eat today ?</string>
+    <string name="profile_title1">Name</string>
+    <string name="profile_title2">Email</string>
+
+    <string name="detail_default_stars">4.8</string>
+    <string name="detail_default_calories">250</string>
+    <string name="detail_default_cookTime">2-4 days</string>
+    <string name="detail_currency">Rs.</string>
+    <string name="details">Details</string>
+    <string name="detailsDesc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s,
+        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        It has survived not only five centuries, but also the leap into electronic typesetting,
+        remaining essentially unchanged. </string>
+    <string name="add_to_cart">Add To Cart</string>
+    <string name="instant_buy">Instant Buy</string>
+    <string name="cart">Cart</string>
+    <string name="cart_pc">Place Order</string>
 </resources>

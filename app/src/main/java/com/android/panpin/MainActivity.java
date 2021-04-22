@@ -190,8 +190,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void onSuccessLogin(FirebaseUser userAcc) {
         Log.d(TAG, "onSuccessLogin: " + userAcc);
-        Log.d(TAG, "onSuccessLogin: " + userAcc.getDisplayName() + " => " + userAcc.getEmail());
-        Paper.book("User").write("FirebaseUser", userAcc);
+        Log.d(TAG, "onSuccessLogin: " + userAcc.getDisplayName() + " => " + userAcc.getPhotoUrl());
+        Paper.book("user").write("FirebaseUser", userAcc);
+        Paper.book("user").write("FirebaseUserProfile", userAcc.getPhotoUrl().toString());
         Intent i = new Intent(getApplicationContext(), HomeActivity.class);
         startActivity(i);
         finish();

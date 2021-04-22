@@ -7,4 +7,16 @@
     <dimen name="bottomMenuHeight">70dp</dimen>
     <dimen name="rv_spacing">10dp</dimen>
     <dimen name="categoryText">22sp</dimen>
+
+    <dimen name="profilePic">100dp</dimen>
+    <dimen name="profileTitle">22sp</dimen>
+    <dimen name="profileSubtitle">18sp</dimen>
+
+    <dimen name="detailName">24sp</dimen>
+    <dimen name="detailPrice">18sp</dimen>
+    <dimen name="detail_icons">25dp</dimen>
+    <dimen name="detail_icon_txt_padding">3dp</dimen>
+    <dimen name="detailSpace">30dp</dimen>
+
+    <dimen name="detail_button_radius">20dp</dimen>
 </resources>

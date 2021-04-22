@@ -12,5 +12,5 @@
         android:drawable="@drawable/cake"
         android:left="10dp"
         android:right="10dp"
-        android:top="10dp"></item>
+        android:top="10dp" />
 </layer-list>
