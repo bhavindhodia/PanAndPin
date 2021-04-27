@@ -64,8 +64,8 @@ public class CartAdapter extends ListAdapter<CartItem, CartAdapter.CartVH> {
             TextView price = view.findViewById(R.id.cart_price);
 
             productName.setText(cartItem.getCakeData().getName());
-            quantity.setText("Qty " + cartItem.getQuantity());
-            price.setText("Rs. " + cartItem.getCakeData().getPrice());
+            quantity.setText(getApplicationContext().getString(R.string.cart_qty, cartItem.getQuantity()));
+            price.setText(getApplicationContext().getString(R.string.detail_currency, cartItem.getCakeData().getPrice()));
 
         }
 

@@ -1,6 +1,5 @@
-package com.android.panpin;
+package com.android.panpin.fragments;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,23 +13,20 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.android.panpin.activities.CartActivity;
+import com.android.panpin.R;
 import com.android.panpin.adapter.HomepageAdapter;
 import com.android.panpin.models.Cake;
-import com.android.panpin.models.CartItem;
 import com.android.panpin.models.ShopViewModel;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 
-import java.util.List;
-
 import static com.facebook.FacebookSdk.getApplicationContext;
 
-public class Home_Fragment extends Fragment implements View.OnClickListener {
+public class HomeFragment extends Fragment implements View.OnClickListener {
 
-    private static String TAG = Home_Fragment.class.getSimpleName();
+    private static String TAG = HomeFragment.class.getSimpleName();
 
     RecyclerView homeRecyclerView;
     private FirebaseFirestore rootRef = FirebaseFirestore.getInstance();
@@ -53,20 +49,20 @@ public class Home_Fragment extends Fragment implements View.OnClickListener {
     }
 
     private void setCart() {
-        //cakeList=Paper.book("cart").read("cakeList",new HashSet<Cake>());
         final Button cartBtn = root.findViewById(R.id.category_cart);
-        shopViewModel = new ViewModelProvider(this).get(ShopViewModel.class);
-        shopViewModel.getCart().observe(getViewLifecycleOwner(), new Observer<List<CartItem>>() {
+        shopViewModel = new ViewModelProvider(requireActivity()).get(ShopViewModel.class);
+        shopViewModel.getAllQuantity().observe(getViewLifecycleOwner(), new Observer<Integer>() {
             @Override
-            public void onChanged(List<CartItem> cartItems) {
-                cartBtn.setText(String.valueOf(cartItems.size()));
+            public void onChanged(Integer integer) {
+                cartBtn.setText(String.valueOf(integer));
+                requireActivity().invalidateOptionsMenu();
             }
         });
 
         cartBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), CartActivity.class));
+                getParentFragmentManager().beginTransaction().replace(R.id.fragment, new CartFragment()).commit();
             }
         });
     }
@@ -75,7 +71,7 @@ public class Home_Fragment extends Fragment implements View.OnClickListener {
         LinearLayout parentLayout = root.findViewById(R.id.categoryLayout);
         for (int i = 0; i < parentLayout.getChildCount(); i++) {
             View x = parentLayout.getChildAt(i);
-            x.setOnClickListener(Home_Fragment.this);
+            x.setOnClickListener(HomeFragment.this);
         }
 
     }

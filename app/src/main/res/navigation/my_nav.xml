@@ -7,17 +7,17 @@
 
     <fragment
         android:id="@+id/categoryFragment"
-        android:name="com.android.panpin.CategoryFragment"
+        android:name="com.android.panpin.fragments.CartFragment"
         android:label="fragment_category"
-        tools:layout="@layout/fragment_category" />
+        tools:layout="@layout/fragment_cart" />
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.android.panpin.HomeFragment"
+        android:name="com.android.panpin.fragments.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.android.panpin.ProfileFragment"
+        android:name="com.android.panpin.fragments.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
 </navigation>

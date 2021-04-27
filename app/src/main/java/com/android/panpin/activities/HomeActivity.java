@@ -8,10 +8,10 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
-import com.android.panpin.CategoryFragment;
-import com.android.panpin.Home_Fragment;
-import com.android.panpin.ProfileFragment;
 import com.android.panpin.R;
+import com.android.panpin.fragments.CartFragment;
+import com.android.panpin.fragments.HomeFragment;
+import com.android.panpin.fragments.ProfileFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class HomeActivity extends AppCompatActivity {
@@ -22,10 +22,10 @@ public class HomeActivity extends AppCompatActivity {
             Fragment selectedFragment = null;
             switch (item.getItemId()) {
                 case R.id.homeFragment:
-                    selectedFragment = new Home_Fragment();
+                    selectedFragment = new HomeFragment();
                     break;
                 case R.id.categoryFragment:
-                    selectedFragment = new CategoryFragment();
+                    selectedFragment = new CartFragment();
                     break;
                 case R.id.profileFragment:
                     selectedFragment = new ProfileFragment();
@@ -41,11 +41,9 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage);
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
-        //NavController navController = Navigation.findNavController(this,R.id.fragment);
-        //NavigationUI.setupWithNavController(bottomNavigationView, navController);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(navListner);
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment, new Home_Fragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment, new HomeFragment()).commit();
 
 
     }

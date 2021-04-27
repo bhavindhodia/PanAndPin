@@ -2,14 +2,21 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:id="@+id/cart_layout"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:fillViewport="true"
+    android:paddingHorizontal="10dp"
+    android:scrollbars="none"
+    tools:context=".fragments.CartFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:id="@+id/cart_full"
         android:padding="5dp"
-        tools:context=".activities.CartActivity">
+        tools:context=".fragment.CategoryFragment">
 
         <TextView
             android:layout_width="match_parent"
@@ -36,6 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:layout_margin="8dp"
+            android:textColor="@color/colorAccentDark"
             android:text="Total: Rs 26"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
 
@@ -46,9 +54,10 @@
             android:layout_gravity="end"
             android:layout_margin="8dp"
             android:background="@drawable/button_style_2"
-            android:paddingHorizontal="15dp"
-            android:paddingVertical="10dp"
+            android:paddingHorizontal="@dimen/cartBtnPaddingHorizontal"
+            android:paddingVertical="@dimen/cartBtnPaddingVertical"
             android:text="@string/cart_pc"
+            android:textSize="@dimen/cart_placeBtn"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
             android:textColor="@color/colorPrimary" />
 

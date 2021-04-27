@@ -17,11 +17,23 @@ public class ShopViewModel extends ViewModel {
     }
 
     public boolean removeItemCart(CartItem cartItem) {
-        cartRepo.removeItemCart(cartItem);
-        return false;
+        return cartRepo.removeItemCart(cartItem);
+    }
+
+    public boolean removeAllItemCart() {
+        return cartRepo.removeAllItemCart();
     }
 
     public LiveData<Double> getTotalPrice() {
         return cartRepo.getTotalPrice();
+    }
+
+
+    public int getQuantity(CartItem cartItem) {
+        return cartRepo.getQuantity(cartItem);
+    }
+
+    public LiveData<Integer> getAllQuantity() {
+        return cartRepo.getAllQuantity();
     }
 }

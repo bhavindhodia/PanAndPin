@@ -7,8 +7,14 @@
     <color name="colorAccentDark">#534794</color>
     <color name="lightVoilet">#d2cfff</color>
 
+    <color name="lightGrey">#DEDEDE</color>
     <color name="grey">#ada8ae</color>
     <color name="darkGrey">#363636</color>
     <color name="darkBlue">#170c50</color>
     <color name="brown">#564640</color>
+
+
+    <color name="error">#F44336</color>
+    <color name="success">#4CAF50</color>
+    <color name="warning">#FFC107</color>
 </resources>

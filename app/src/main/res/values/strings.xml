@@ -4,20 +4,29 @@
     <string name="facebook_app_id">293634762119620</string>
     <string name="fb_login_protocol_scheme">fb293634762119620</string>
 
+    <!--    Homepage-->
+    <string name="homepageWelcome">What would \n You like to eat today ?</string>
+
+    <!--    Bottom Navbar-->
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="cart">Cart</string>
+
+    <!-- Login Page Strings-->
     <string name="loginText">Hi, nice to meet you!</string>
     <string name="loginText2">Pan &amp; Pin welcomes you .Choose below option to get started.</string>
-
     <string name="googleBtn">Continue With Google</string>
     <string name="facebookBtn">Continue With Facebook</string>
 
-    <string name="homepageWelcome">What would \n You like to eat today ?</string>
+    <!--    Profile Fragment-->
     <string name="profile_title1">Name</string>
     <string name="profile_title2">Email</string>
 
+    <!--Detail Page Strings-->
     <string name="detail_default_stars">4.8</string>
     <string name="detail_default_calories">250</string>
     <string name="detail_default_cookTime">2-4 days</string>
-    <string name="detail_currency">Rs.</string>
+    <string name="detail_currency">Rs. %1$d</string>
     <string name="details">Details</string>
     <string name="detailsDesc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
         Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s,
@@ -26,6 +35,24 @@
         remaining essentially unchanged. </string>
     <string name="add_to_cart">Add To Cart</string>
     <string name="instant_buy">Instant Buy</string>
-    <string name="cart">Cart</string>
-    <string name="cart_pc">Place Order</string>
+
+
+    <!--    Cart Fragment Strings-->
+    <string name="cart_pc">Checkout</string>
+    <string name="snackbar_cart_delete_s">Removed %1$s from cart</string>
+    <string name="snackbar_cart_delete_f">Failed to delete %1$s </string>
+    <string name="cart_total_price">Total Rs. %1$.02f</string>
+    <string name="cart_qty">Qty %1$d</string>
+    <string name="successCart">%1s added to cart.</string>
+    <string name="failedCart">Failed to add in cart</string>
+
+    <!--    Payment String-->
+    <string name="paymentCurrency">Rs %1s</string>
+    <string name="payment_string">Please select your payment method</string>
+    <string name="net_banking">Net Banking</string>
+    <string name="upi">UPI</string>
+    <string name="credit_card">Credit Card</string>
+    <string name="debit_card">Debit Card</string>
+    <string name="checkout">Checkout</string>
+
 </resources>

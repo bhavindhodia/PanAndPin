@@ -6,6 +6,8 @@
         android:centerColor="#924fb8"
         android:endColor="#bd4dae"
         android:startColor="#7850ba" />
-    <corners android:radius="20dp" />
+    <corners
+        android:bottomLeftRadius="@dimen/profileRadius"
+        android:bottomRightRadius="@dimen/profileRadius" />
 
 </shape>
